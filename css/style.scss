@@ -1,0 +1,325 @@
+// Common settings
+html {
+  font-size: 100%;
+}
+
+body {
+  color: #333;
+  font-size: 1rem;
+  font-family: 'Noto Sans', 'Noto Sans JP', sans-serif;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.wrapper {
+  max-width: 1200px;
+  padding: 0 16px;
+  margin: 0 auto;
+}
+
+.readmore {
+  font-size: 0.875rem;
+  text-align: center;
+
+  a {
+    padding-bottom: 1px;
+    color: #333;
+    position: relative;  
+  }
+
+  a::after {
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    background: #333;
+    transition: all 200ms ease;  
+  }
+
+  a:hover:after {
+    opacity: 0;
+    transform: translateY(3px);
+  }
+}
+
+// Header
+.header {
+  width: 100%;
+  background-color: #ffffff;
+  position: fixed;
+  z-index: 10;
+
+  .header-title {
+    padding: 20px 16px;
+    line-height: 1px;
+
+    a {
+      display: inline-block;
+      color: #fff;
+    }
+  }
+
+  nav {
+    background-color: #333;
+  }
+
+  .header-ul {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .header-li {
+    padding: 10px 60px 10px 0;
+    font-size: 0.875rem;
+
+    a {
+      color: #fff;
+    }
+  }
+}
+
+// Pick Up
+.pickup {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 150px;
+  margin-bottom: 60px;
+
+  .article {
+    width: 32%;
+  }
+
+  h2 {
+    font-size: 1rem;
+    margin: 10px 0 15px 0;
+  }
+}
+
+// Container
+.container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 60px;
+}
+
+// Articles
+.main {
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 60px;
+
+  article {
+    margin-bottom: 80px;
+  }
+
+  .article-title {
+    font-size: 1.5rem;
+    margin: 10px 0 15px 0;
+  }
+
+  ul {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+  }
+
+  li {
+    margin-right: 20px;
+    font-size: 0.875rem;
+  }
+
+  p {
+    margin: 10px 40px 30px 40px;
+  }
+}
+
+// Aside
+.aside {
+  width: 33%;
+  padding: 20px;
+
+  .aside-title {
+    font-size: 1.125rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  section {
+    margin-bottom: 60px;
+  }
+
+  .aside-text {
+    font-size: 0.875rem;
+    text-align: left;
+  }
+
+  // Profile section
+  .profile-section {
+    // margin-bottom: 60px;
+    text-align: center;
+  }
+
+  .author-img {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    margin-bottom: 30px;
+    display: inline-block;
+  }
+
+  // Ranking
+  .ranking-article {
+    margin-bottom: 30px;
+  }
+
+  // Archive
+  .archive-ul {
+    border-bottom: solid  1px #777;
+  }
+
+  .archive-li {
+    padding: 20px;
+    border-top: 1px solid #777;
+    font-size: 0.875rem;
+    text-align: left;
+  }
+}
+
+// Footer
+.footer {
+  font-size: 0.875rem;
+  background-color: #f7f7f7;
+
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .content {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer-title {
+    font-size: 1.125rem;
+    padding-bottom: 30px;
+    font-weight: bold;
+  }
+
+  // About
+  .about-ul {
+    margin: 20px 0;
+  }
+  
+  .about-li {
+    margin-bottom: 5px;
+  }
+
+  // Make a triangle list
+  .arrow {
+    position: relative;
+    display: inline-block;
+    padding-left: 12px;
+    color: #333;
+  }
+
+  .arrow::before {
+    content: '';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 6px 0 6px 8px;
+    border-color: transparent transparent transparent #333;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin-top: -6px;
+  }
+
+  // Menu
+  .menu-ul {
+    border-bottom: 1px solid #777;
+  }
+
+  .menu-li {
+    padding: 15px;
+    border-top: 1px solid #777;
+  }
+
+  .copyright {
+    text-align: center;
+    font-size: 0.750rem;
+    padding: 10px 0;
+  }
+}
+
+// Mobile
+@media screen and (max-width: 767px) {
+  // Header
+  nav {
+    overflow-x: scroll;
+  }
+  
+  // Pick up
+  .pickup {
+    flex-direction: column;
+    padding-top: 140px;
+
+    .article {
+      width: 100%;
+      margin-bottom: 30px;
+    }
+  }
+
+  // Container
+  .container {
+    flex-direction: column;
+  }
+
+  .main {
+    width: 100%;
+    margin-bottom: 0;
+  }
+
+  // Aside
+  .aside {
+    width: 100%;
+    padding: 0;
+  }
+
+  // Footer
+  .footer {
+    width: 100%;
+
+    .footer-content {
+      flex-direction: column;
+    }
+
+    .content {
+      width: 100%;
+      margin-bottom: 30px;
+    }
+
+  }
+}
